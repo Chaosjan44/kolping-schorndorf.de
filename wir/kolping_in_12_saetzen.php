@@ -6,15 +6,16 @@ require_once('templates/header.php');
     <div style="min-height: 80vh;">
         <h1 class="display-3 text-center text-kolping-orange">Kolping in 12 Sätzen</h1>
         <div class="row">
-            <div class="col-2"></div>
-            <div class="col-3 justify-content-end">
-                <picture>
-                    <source type="image/webp" srcset="/media/wir/ak_portraet_kl.webp">
-                    <source type="image/jpeg" srcset="/media/wir/ak_portraet_kl.jpg">
-                    <img src="/media/wir/ak_portraet_kl.jpg" class="d-block w-100 rounded" alt="Vorschaubild">
-                </picture>
-            </div>
-            <div class="col-7 my-auto">
+            <?php if (!isMobile()):?>
+                <div class="col-3">
+                    <picture>
+                        <source type="image/webp" srcset="/media/wir/ak_portraet_kl.webp">
+                        <source type="image/jpeg" srcset="/media/wir/ak_portraet_kl.jpg">
+                        <img src="/media/wir/ak_portraet_kl.jpg" class="d-block w-100 rounded" alt="Vorschaubild">
+                    </picture>
+                </div>
+            <?php endif;?>
+            <div class="<?php if (!isMobile()) print("col-7"); else print("col-12");?> my-auto">
                 <li>Wir laden ein und machen Mut zur Gemeinschaft.</li>
                 <li>Wir handeln im Auftrag Jesu Christi.</li>
                 <li>Wir nehmen uns Adolph Kolping zum Vorbild.</li>

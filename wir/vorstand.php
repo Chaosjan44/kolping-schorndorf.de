@@ -6,14 +6,14 @@ require_once('templates/header.php');
     <div style="min-height: 80vh;">
         <h1 class="display-3 text-center text-kolping-orange">Unser Vorstand</h1>
         <div class="row">
-            <div class="col-4">
+            <div class="<?php if (!isMobile()) print("col-4"); else print("col-12 py-3");?>">
                 <picture>
                     <source type="image/webp" srcset="/media/wir/vorstand.webp" class="d-block w-100">
                     <source type="image/jpeg" srcset="/media/wir/vorstand.jpg" class="d-block w-100">
-                    <img src="/media/wir/vorstand.jpg" class="d-block w-100" alt="Vorschaubild">
+                    <img src="/media/wir/vorstand.jpg" class="d-block w-100 rounded" alt="Vorschaubild">
                 </picture>
             </div>
-            <div class="col-8">
+            <div class="<?php if (!isMobile()) print("col-8"); else print("col-12 py-3");?>">
                 <div class="accordion accordion-flush cbg2 ctext" id="accordionExample">
                     <div class="accordion-item cbg2 ctext">
                         <h2 class="accordion-header cbg2 ctext" id="Praeses">

@@ -44,7 +44,7 @@ session_start();
                     <a class="nav-link clink" aria-current="page" href="/termine.php">Termine</a>
                 </li>
                 <li class="nav-item text-size-x-large">
-                    <a class="nav-link clink" href="/blog.php">Nachrichten</a>
+                    <a class="nav-link clink" href="/nachrichten.php">Nachrichten</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle cbg clink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

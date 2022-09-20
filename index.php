@@ -120,7 +120,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 Die Kolpingjugend trifft sich jeden zweiten Samstag um 16:30 im Kolpinghaus.<br>
                                 Weitere Informationen sind auf unserer <a href="https://jugend.kolping-schorndorf.de" class="link">Webseite</a> zu finden.<br>
                                 Kontakt: Gruppenleitende<br>
-                                E-Mail: jugend@kolping-schorndorf.de
+                                E-Mail: <a href="mailto:jugend@kolping-schorndorf.de" class="link">jugend@kolping-schorndorf.de</a>
                             </span>
                         </div>
                     </div>
@@ -218,16 +218,92 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </script>
     <?php else: ?>
         <div class="container">
-            <div class="row ctext">
-                <h1 class="display-4 text-center">Kolpingjugend Schorndorf</h1>
-                <span class="text-center text-size-larger">
-                    Die Kolpingjugend Schorndorf ist eine Jugendgruppe der<br>
-                    <a href="https://kolping-schorndorf.de/" class="text-size-large link">Kolpingsfamilie Schorndorf</a>.<br>
-                    Wir treffen uns jeden 2. Samstag zu Gruppenstunden.<br>
-                    Wenn du zwischen 11 und 25 Jahren alt bist und Lust hast auch zu unserer Gruppenstunde zu kommen, melde dich gerne bei uns unter:<br>
-                    E-Mail: <a href="mailto:jugend@kolping-schorndorf.de" class="text-size-large link">jugend@kolping-schorndorf.de</a><br>
-                    Wir freuen uns auf dich!
-                </span>
+            <div class="row ctext justify-content-between">
+                <h1 class="display-4 text-center text-kolping-orange">Gruppierungen</h1>
+                <div class="col-12 py-3">
+                    <div class="row">
+                        <h2 class="text-start">Junge Familien</h2>
+                        <div class="col-4">
+                            <a>
+                                <picture data-bs-interval="5000">
+                                    <source type="image/webp" srcset="/media/index/junge_familien.webp">
+                                    <source type="image/jpeg" srcset="/media/index/junge_familien.jpg">
+                                    <img src="/media/index/junge_familien.jpg" class="d-block w-100 rounded-circle" alt="Vorschaubild">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="col-8">
+                            <span>
+                                Die Jungen Familien treffen sich in regelmäßigen Abständen für gemeinsam Unternehmungen.<br>
+                                Kontakt: Judith Höfer<br>
+                                Telefon: 07181 - 254908
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 py-3">
+                    <div class="row">
+                        <h2 class="text-start">Seniorengruppe</h2>
+                        <div class="col-4">
+                            <a>
+                                <picture data-bs-interval="5000">
+                                    <source type="image/webp" srcset="/media/index/mutter_kind_kl.webp">
+                                    <source type="image/jpeg" srcset="/media/index/mutter_kind_kl.jpg">
+                                    <img src="/media/index/mutter_kind_kl.jpg" class="d-block w-100 rounded-circle" alt="Vorschaubild">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="col-8">
+                            <span>
+                                Termine siehe Programm<br>
+                                Nähere Informationen erfolgen jeweils ca. 2 Wochen vor Termin, auch mit Aushang am schwarzen Brett im Kolpinghaus.<br>
+                                Kontakt: Rudi Pick<br>
+                                Telefon: 07181 - 76457
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 py-3">
+                    <div class="row">
+                        <h2 class="text-start">Frauengruppe</h2>
+                        <div class="col-4">
+                            <a>
+                                <picture data-bs-interval="5000">
+                                    <source type="image/webp" srcset="/media/index/frauengruppe.webp">
+                                    <source type="image/jpeg" srcset="/media/index/frauengruppe.jpg">
+                                    <img src="/media/index/frauengruppe.jpg" class="d-block w-100 rounded-circle" alt="Vorschaubild">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="col-8">
+                            <span>
+                                Treff jeweils donnerstags ab 14:30 im Kolpinghaus.<br>
+                                Darüber hinaus sind verschiedene Aktivitäten geplant, bitte Aushang im Kolpinghaus beachten.<br>
+                                Kontakt: Maria Schieszl<br>
+                                Telefon: 07181 - 61213
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 py-3">
+                    <div class="row">
+                        <h2 class="text-start">Kolpingjugend</h2>
+                        <div class="col-4">
+                            <a href="https://jugend.kolping-schorndorf.de" class="clink">
+                                <img src="/media/index/kj_light.png" class="kj_light w-100 rounded-circle" alt="Kolpingjugend Logo">
+                                <img src="/media/index/kj_dark.png" class="kj_dark w-100 rounded-circle" alt="Kolpingjugend Logo">
+                            </a>
+                        </div>
+                        <div class="col-8">
+                            <span>
+                                Die Kolpingjugend trifft sich jeden zweiten Samstag um 16:30 im Kolpinghaus.<br>
+                                Weitere Informationen sind auf unserer <a href="https://jugend.kolping-schorndorf.de" class="link">Webseite</a> zu finden.<br>
+                                Kontakt: Gruppenleitende<br>
+                                E-Mail: <a href="mailto:jugend@kolping-schorndorf.de" class="link">jugend@kolping-schorndorf.de</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row gx-5 pt-3 justify-content-center">
                 <div class="col-11">
