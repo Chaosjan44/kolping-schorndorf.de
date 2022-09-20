@@ -6,6 +6,8 @@ CREATE TABLE `users` (
   `vorname` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `perm_login` tinyint(1) NOT NULL DEFAULT 0,
+  `perm_event` tinyint(1) NOT NULL DEFAULT 0,
+  `perm_blog` tinyint(1) NOT NULL DEFAULT 0,
   `perm_admin` tinyint(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`user_id`)
 );

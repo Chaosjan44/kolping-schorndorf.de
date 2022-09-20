@@ -1,3 +1,11 @@
+* {
+    color: #ffffff;
+}
+
+#map {
+    color: #000000 !important;
+}
+
 html, body {
     background-color: #2d3238 !important;
     height: 100%;

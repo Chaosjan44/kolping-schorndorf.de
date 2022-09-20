@@ -43,9 +43,9 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <h1 class="display-4 text-center text-kolping-orange">Gruppierungen</h1>
                 <div class="col-6 py-3">
                     <div class="row">
+                        <h2 class="text-start">Junge Familien</h2>
                         <div class="col-4">
                             <a>
-                                <h2 class="text-center">Junge Familien</h2>
                                 <picture data-bs-interval="5000">
                                     <source type="image/webp" srcset="/media/index/junge_familien.webp">
                                     <source type="image/jpeg" srcset="/media/index/junge_familien.jpg">
@@ -64,9 +64,9 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </div>
                 <div class="col-6 py-3">
                     <div class="row">
+                        <h2 class="text-start">Seniorengruppe</h2>
                         <div class="col-4">
                             <a>
-                                <h2 class="text-center">Senioren-gruppe</h2>
                                 <picture data-bs-interval="5000">
                                     <source type="image/webp" srcset="/media/index/mutter_kind_kl.webp">
                                     <source type="image/jpeg" srcset="/media/index/mutter_kind_kl.jpg">
@@ -86,9 +86,9 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </div>
                 <div class="col-6 py-3">
                     <div class="row">
+                        <h2 class="text-start">Frauengruppe</h2>
                         <div class="col-4">
                             <a>
-                                <h2 class="text-center">Frauen-gruppe</h2>
                                 <picture data-bs-interval="5000">
                                     <source type="image/webp" srcset="/media/index/frauengruppe.webp">
                                     <source type="image/jpeg" srcset="/media/index/frauengruppe.jpg">
@@ -108,9 +108,9 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </div>
                 <div class="col-6 py-3">
                     <div class="row">
+                        <h2 class="text-start">Kolpingjugend</h2>
                         <div class="col-4">
                             <a href="https://jugend.kolping-schorndorf.de" class="clink">
-                                <h2 class="text-center">Kolping-Jugend</h2>
                                 <img src="/media/index/kj_light.png" class="kj_light w-100 rounded-circle" alt="Kolpingjugend Logo">
                                 <img src="/media/index/kj_dark.png" class="kj_dark w-100 rounded-circle" alt="Kolpingjugend Logo">
                             </a>
@@ -190,13 +190,18 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-between">
+            <div class="justify-content-center py-3">
                 <h1 class="display-4 text-kolping-orange text-center">Ihr Weg zu uns</h1>
-                <div class="col-6">
-
+                <div class="row py-2 justify-content-start">
+                    <div id="map"></div>
                 </div>
-                <div class="col-6 justify-content-end">
-                    <div id="map" class="justify-content-end"></div>
+                <div class="row py-2">
+                    <h3 class="ctext">Adresse:</h3>
+                    <span class="ctext">
+                        Kolpingfamilie Schorndorf e.V.<br>
+                        Lortzingstraße 44<br>
+                        73614 Schorndorf
+                    </span>
                 </div>
             </div>
         </div>

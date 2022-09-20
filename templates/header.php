@@ -46,8 +46,15 @@ session_start();
                 <li class="nav-item text-size-x-large">
                     <a class="nav-link clink" href="/blog.php">Nachrichten</a>
                 </li>
-                <li class="nav-item text-size-x-large">
-                    <a class="nav-link clink" href="/wir.php">Wir</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle cbg clink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Wir über uns
+                    </a>
+                    <ul class="dropdown-menu cbg ctext">
+                        <li><a class="dropdown-item clink cbg" href="/wir/grusswort.php">Grusswort Präses</a></li>
+                        <li><a class="dropdown-item clink cbg" href="/wir/vorstand.php">Unser Vorstand</a></li>
+                        <li><a class="dropdown-item clink cbg" href="/wir/kolping_in_12_saetzen.php">Kolping in 12 Sätzen</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item text-size-x-large <?php if (!isMobile()) print("pt-1 ps-2"); else print("pt-2");""?>">
                     <a href="https://jugend.kolping-schorndorf.de">
