@@ -35,6 +35,14 @@ button {
     height: 60px;
 }
 
+.kj_light {
+    display: none !important;
+}
+
+.kj_dark {
+    display: block !important;
+}
+
 .footer {
     background-color: #212529;
 }

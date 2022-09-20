@@ -8,7 +8,7 @@ CREATE TABLE `users` (
   `perm_login` tinyint(1) NOT NULL DEFAULT 0,
   `perm_admin` tinyint(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`user_id`)
-)
+);
 
 CREATE TABLE `securitytokens` (
   `securitytoken_id` int(10) NOT NULL AUTO_INCREMENT,

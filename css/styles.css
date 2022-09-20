@@ -3,6 +3,10 @@
     display: none;
 }
 
+#map { 
+    height: 400px;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
