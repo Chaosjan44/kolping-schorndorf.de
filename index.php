@@ -109,7 +109,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <div class="col-6 py-3">
                     <div class="row">
                         <div class="col-4">
-                            <a href="https://jugend.kolping-schorndorf.de">
+                            <a href="https://jugend.kolping-schorndorf.de" class="clink">
                                 <h2 class="text-center">Kolping-Jugend</h2>
                                 <img src="/media/index/kj_light.png" class="kj_light w-100 rounded-circle" alt="Kolpingjugend Logo">
                                 <img src="/media/index/kj_dark.png" class="kj_dark w-100 rounded-circle" alt="Kolpingjugend Logo">
