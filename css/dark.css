@@ -2,6 +2,10 @@
     color: #ffffff;
 }
 
+#map {
+    color: #000000 !important;
+}
+
 html, body {
     background-color: #2d3238 !important;
     height: 100%;
@@ -33,6 +37,14 @@ button {
 .navbar-kj_dark {
     display: inline-block;
     height: 60px;
+}
+
+.kj_light {
+    display: none !important;
+}
+
+.kj_dark {
+    display: block !important;
 }
 
 .footer {

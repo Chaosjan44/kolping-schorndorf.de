@@ -35,6 +35,14 @@ button {
     height: 60px;
 }
 
+.kj_light {
+    display: block !important;
+}
+
+.kj_dark {
+    display: none !important;
+}
+
 .footer {
     background-color: #EDEDED;
 }

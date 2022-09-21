@@ -17,6 +17,8 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" >
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
     <link rel="stylesheet" href="/css/styles.css">          <!-- Link Stylesheet -->
     <link rel="stylesheet" href="/css/dark.css" disabled>   <!-- Link Dark Stylesheet and disable it -->
     <link rel="stylesheet" href="/css/light.css" disabled>  <!-- Link Light Stylesheet and disable it -->
@@ -42,10 +44,17 @@ session_start();
                     <a class="nav-link clink" aria-current="page" href="/termine.php">Termine</a>
                 </li>
                 <li class="nav-item text-size-x-large">
-                    <a class="nav-link clink" href="/blog.php">Nachrichten</a>
+                    <a class="nav-link clink" href="/nachrichten.php">Nachrichten</a>
                 </li>
-                <li class="nav-item text-size-x-large">
-                    <a class="nav-link clink" href="/wir.php">Wir</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle cbg clink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Wir über uns
+                    </a>
+                    <ul class="dropdown-menu cbg ctext">
+                        <li><a class="dropdown-item clink cbg" href="/wir/grusswort.php">Grusswort Präses</a></li>
+                        <li><a class="dropdown-item clink cbg" href="/wir/vorstand.php">Unser Vorstand</a></li>
+                        <li><a class="dropdown-item clink cbg" href="/wir/kolping_in_12_saetzen.php">Kolping in 12 Sätzen</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item text-size-x-large <?php if (!isMobile()) print("pt-1 ps-2"); else print("pt-2");""?>">
                     <a href="https://jugend.kolping-schorndorf.de">
