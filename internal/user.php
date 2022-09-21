@@ -188,7 +188,7 @@ require_once("templates/header.php");
                 </div>
                 <div class="col-4 d-flex justify-content-end">
                     <div>
-                        <button class="btn btn-kolping" onclick="window.location.href = '/register.php';">User registrieren</button>
+                        <button class="btn btn-kolping" onclick="window.location.href = '/internal/register.php';">User registrieren</button>
                     </div>
                 </div>
             </div>
