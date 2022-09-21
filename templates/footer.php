@@ -20,6 +20,10 @@ $crdate = "2022";
                             <i class="bi bi-chevron-right"></i>
                             <a href="/nachrichten.php" class="link ctext ps-2">Nachrichten</a>
                         </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="https://cloud.kolping-schorndorf.de" class="link ctext ps-2">Cloud</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-2 text-start">
@@ -69,6 +73,10 @@ $crdate = "2022";
                         <li>
                             <i class="bi bi-chevron-right"></i>
                             <a href="/nachrichten.php" class="link ctext ps-2">Nachrichten</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="https://cloud.kolping-schorndorf.de" class="link ctext ps-2">Cloud</a>
                         </li>
                     </ul>
                 </div>
