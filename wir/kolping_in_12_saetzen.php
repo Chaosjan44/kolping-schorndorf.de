@@ -7,6 +7,7 @@ require_once('templates/header.php');
         <h1 class="display-3 text-center text-kolping-orange">Kolping in 12 Sätzen</h1>
         <div class="row">
             <?php if (!isMobile()):?>
+                <div class="col-2"></div>
                 <div class="col-3">
                     <picture>
                         <source type="image/webp" srcset="/media/wir/ak_portraet_kl.webp">
