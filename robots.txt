@@ -27,6 +27,7 @@
 #
 #
 User-agent: *
+Sitemap: https://test.kolping-schorndorf.de/sitemap.xml
 Disallow: /admin/
 Disallow: /hidden/
 Disallow: /internal.php
