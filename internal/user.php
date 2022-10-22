@@ -119,7 +119,7 @@ if(isset($_POST['action'])) {
                             </div>
                             <div class="col mb-3">
                                 <div class="input-group justify-content-center">
-                                    <label for="perm_login" class="input-group-text">Login Berechtigungen?</label>
+                                    <label for="perm_login" class="input-group-text">Anmelde Berechtigungen?</label>
                                     <div class="input-group-text">
                                         <input value="remember-me" id="perm_login" type="checkbox" name="perm_login" value="1" class="form-check-input checkbox-kolping" <?php if ($user1[0]['perm_login'] == 1) print("checked");?>>
                                     </div>
@@ -188,18 +188,18 @@ require_once("templates/header.php");
                 </div>
                 <div class="col-4 d-flex justify-content-end">
                     <div>
-                        <button class="btn btn-kolping" onclick="window.location.href = '/internal/register.php';">User registrieren</button>
+                        <button class="btn btn-kolping" onclick="window.location.href = '/internal/register.php';">Nutzer*in registrieren</button>
                     </div>
                 </div>
             </div>
-            <p><?php print($total_users); ?> Benutzer</p>
+            <p><?php print($total_users); ?> Benutzer*innen</p>
             <div class="table-responsive">
                 <table class="table align-middle table-borderless table-hover">
                     <thead>
                         <tr>
                             <div class="cbg ctext rounded">
                                 <th scope="col" class="border-0 text-center">
-                                    <div class="p-2 px-3 text-uppercase ctext">User ID</div>
+                                    <div class="p-2 px-3 text-uppercase ctext">Nutzer*in ID</div>
                                 </th>
                                 <th scope="col" class="border-0 text-center">
                                     <div class="p-2 px-3 text-uppercase ctext">Vorname</div>
@@ -245,7 +245,7 @@ require_once("templates/header.php");
                                                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                                 </div>
                                                 <div class="offcanvas-body">
-                                                    <span class="pb-3">Alles was diese*r User angelegt hat wird auf den User Admin zugeordnet!<br></span>
+                                                    <span class="pb-3">Alles was diese*r Nutzer*in angelegt hat wird auf den Nutzer Admin zugeordnet!<br></span>
                                                     <button class="btn btn-success mx-2 mt-4" type="submit" name="action" value="deleteconfirm">Ja</button>
                                                     <button class="btn btn-danger mx-2 mt-4" type="button" data-bs-dismiss="offcanvas" aria-label="Close">Nein</button>
                                                 </div>
