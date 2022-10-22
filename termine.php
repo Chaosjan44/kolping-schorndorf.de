@@ -1,6 +1,6 @@
 <?php require_once("templates/header.php"); 
 
-$stmt = $pdo->prepare('SELECT * FROM events WHERE visible = 1 ORDER BY date asc');
+$stmt = $pdo->prepare('SELECT * FROM events WHERE visible = 1 ORDER BY date desc');
 $stmt->execute();
 $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
