@@ -134,7 +134,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <div class="row row-cols-1">
                                 <?php foreach ($events as $event): ?> 
                                     <div class="col mb-3">
-                                        <div class="card cbg2 py-3 px-3">
+                                        <div class="card cbg2 py-3 px-3 shadow1">
                                             <div class="row g-0">
                                                 <div class="col-md-2 d-flex justify-content-start align-items-center">
                                                     <div class="card cbg text-size-larger py-3 px-3 align-items-center text-center">
@@ -163,7 +163,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="col">
                             <div class="row row-cols-1">
                                 <?php foreach ($blogentrys as $blogentry): ?> 
-                                    <div class="col card cbg2 mb-3 px-0">
+                                    <div class="col card cbg2 mb-3 px-0 shadow1">
                                         <div class="row g-0">
                                             <div class="col-md-4">
                                                 <?php if(isset($blogentry['source'])): ?>
@@ -313,7 +313,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <div class="col">
                                 <div class="row row-cols-1">
                                 <?php foreach ($events as $event): ?> 
-                                    <div class="col mb-3 card cbg2 py-3 px-3"> 
+                                    <div class="col mb-3 card cbg2 py-3 px-3 shadow1"> 
                                         <div class="row g-0 row-cols-2">
                                             <div class="col-3 d-flex justify-content-start align-items-center">
                                                 <div class="card cbg text-size-larger py-3 px-3 align-items-center text-center">
@@ -341,7 +341,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <div class="col">
                                 <div class="row row-cols-1">
                                     <?php foreach ($blogentrys as $blogentry): ?> 
-                                        <div class="col card cbg2 mb-3 px-0">
+                                        <div class="col card cbg2 mb-3 px-0 shadow1">
                                             <div class="row g-0">
                                                 <div class="col-md-4">
                                                     <?php if(isset($blogentry['source'])): ?>
