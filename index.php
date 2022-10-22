@@ -145,7 +145,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                                 </div>
                                                 <div class="col-md-10 d-flex justify-content-start align-items-center">
                                                     <div class="card-body ctext align-items-center">
-                                                        <h3 class="card-title align-center"><?=$event['title']?></h3>
+                                                        <h3 class="card-title mb-0 align-center"><?=$event['title']?></h3>
                                                     </div>
                                                 </div>
                                                 <a href="/termin.php?id=<?=$event['events_id']?>" class="stretched-link"></a>
@@ -324,7 +324,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                             </div>
                                             <div class="col-9 d-flex justify-content-start align-items-center">
                                                 <div class="card-body ctext align-items-center">
-                                                    <h5 class="card-title align-center text-break"><?=$event['title']?></h5>
+                                                    <h5 class="card-title mb-0 align-center text-break"><?=$event['title']?></h5>
                                                 </div>
                                             </div>
                                             <a href="/termin.php?id=<?=$event['events_id']?>" class="stretched-link"></a>
