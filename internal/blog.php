@@ -131,11 +131,37 @@ if (isset($_POST['action'])) {
                     // Hochladen der Bilder
                     if(move_uploaded_file($_FILES["file"]["tmp_name"][$i], $targetFilePath)){
                         // Einpflegen der Bilder in die Datenbank
-                        $stmt = $pdo->prepare("INSERT into blog_images (blog_entrys_id, source, alt, prev_img) VALUES ( ? , ? , ? , ? )");
+                        $hash = md5_file("blog_imgs/" . $fileName);
+                        $imgAlt = 'imgAlt-'.$hash;
+                        if (isset($_POST[$imgAlt])) {
+                            $imgAlt = $_POST[$imgAlt];
+                        } else {
+                            $imgAlt = $blog_entrys_id;
+                        }
+                        $imgOwner = 'imgOwner-'.$hash;
+                        if (isset($_POST[$imgOwner])) {
+                            $imgOwner = $_POST[$imgOwner];
+                        } else {
+                            $imgOwner = $blog_entrys_id;
+                        }
+                        $prev_img = 'prevImg-'.$hash;
+                        if (isset($_POST[$prev_img])) {
+                            $prev_img = 1;
+                            $stmt = $pdo->prepare('UPDATE blog_images SET prev_img= 0 where blog_entrys_id = ?');
+                            $stmt->bindValue(1, $blog_entrys_id, PDO::PARAM_INT);
+                            $result = $stmt->execute();
+                            if (!$result) {
+                                error('Datenbank Fehler!', pdo_debugStrParams($stmt));
+                            }
+                        } else {
+                            $prev_img = 0;
+                        }
+                        $stmt = $pdo->prepare("INSERT into blog_images (blog_entrys_id, source, alt, owner, prev_img) VALUES ( ? , ? , ? , ? , ? )");
                         $stmt->bindValue(1, $blog_entrys_id);
                         $stmt->bindValue(2, "/blog_imgs/" . $fileName);
-                        $stmt->bindValue(3, $blog_entrys_id);
-                        $stmt->bindValue(4, 0);
+                        $stmt->bindValue(3, $imgAlt);
+                        $stmt->bindValue(4, $imgOwner);
+                        $stmt->bindValue(5, $prev_img);
                         $result = $stmt->execute();
                         if (!$result) {
                             error_log(print_r($stmt, true));
@@ -180,7 +206,11 @@ if (isset($_POST['action'])) {
         $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
         require_once("templates/header.php"); 
         ?>
+        <script>
+            var blocker = true;
+        </script>
         <div class="container-xxl py-3" style="min-height: 80vh;">
+            <script src='/js/md5.js'></script>
             <script src="/js/markdown_mark.js"></script>
             <div class="row row-cols-1 m-4 p-2 cbg2 rounded">
                 <form action="blog.php" method="post" enctype="multipart/form-data">
@@ -202,14 +232,14 @@ if (isset($_POST['action'])) {
                             </div>
                             <div class="justify-content-end d-flex">
                                 <div class="input-group flex-nowrap ctext me-2">
-                                    <span class="input-group-text" for="inputVisible">Visible</span>
+                                    <span class="input-group-text" for="inputVisible">Sichtbar</span>
                                     <div class="input-group-text">
                                         <input class="form-check-input mt-0 checkbox-kolping" type="checkbox" id="inputVisible" name="visible" <?=($entry[0]['visible']==1 ? 'checked':'')?>>
                                     </div>                            
                                 </div>
                                 <input type="number" value="<?=$blog_entrys_id?>" name="blog_entrys_id" style="display: none;" required>
-                                <button type="submit" class="btn btn-success ctext mx-2" name="action" value="save"><span>Speichern</span></button>
-                                <button type="button" class="btn btn-danger ctext ms-2" onclick="window.location.href = '/internal/blog.php';">Abbrechen</button>
+                                <button type="submit" class="btn btn-success ctext mx-2" name="action" value="save" onclick="blocker = false;"><span>Speichern</span></button>
+                                <button type="button" class="btn btn-danger ctext ms-2" onclick="blocker = false; window.location.href = '/internal/blog.php';">Abbrechen</button>
                             </div>
                         </div>
                     <?php else: ?>
@@ -237,7 +267,7 @@ if (isset($_POST['action'])) {
                         <div class="col p-2 rounded">
                             <div>
                                 <div class="input-group flex-nowrap justify-content-center ctext">
-                                    <span class="input-group-text" for="inputVisible">Visible</span>
+                                    <span class="input-group-text" for="inputVisible">Sichtbar</span>
                                     <div class="input-group-text">
                                         <input class="form-check-input mt-0 checkbox-kolping" type="checkbox" id="inputVisible" name="visible" <?=($entry[0]['visible']==1 ? 'checked':'')?>>
                                     </div>                            
@@ -246,8 +276,8 @@ if (isset($_POST['action'])) {
                         </div>
                         <div class="col p-2 rounded d-flex justify-content-between">
                             <input type="number" value="<?=$blog_entrys_id?>" name="blog_entrys_id" style="display: none;" required>
-                            <button type="submit" class="btn btn-success ctext" name="action" value="save"><span>Speichern</span></button>
-                            <button type="button" class="btn btn-danger ctext" onclick="window.location.href = '/internal/blog.php';">Abbrechen</button>
+                            <button type="submit" class="btn btn-success ctext" name="action" value="save" onclick="blocker = false;"><span>Speichern</span></button>
+                            <button type="button" class="btn btn-danger ctext" onclick="blocker = false; window.location.href = '/internal/blog.php';">Abbrechen</button>
                         </div>
                     <?php endif; ?>
                     <div class="col p-2 rounded">
@@ -348,7 +378,16 @@ if (isset($_POST['action'])) {
                 </div>
             </div>
         </div>
-        <?php include_once("templates/footer.php");
+        <script>
+            window.onbeforeunload = function() { 
+                if (blocker == true) {
+                    return "Achtung, deine Arbeit wird eventuell nicht gespeichert!"; 
+                    blocker = true;
+                }
+            }
+        </script>
+        <?php 
+        include_once("templates/footer.php");
         exit;
     }
     if ($_POST['action'] == 'add') {
@@ -357,7 +396,11 @@ if (isset($_POST['action'])) {
             error('Unzureichende Berechtigungen!');
         }
         ?>
+        <script>
+            let blocker = true;
+        </script>
         <div class="container-xxl py-3" style="min-height: 80vh;">
+            <script src='/js/md5.js'></script>
             <script src="/js/markdown_mark.js"></script>
             <div class="row row-cols-1 m-4 p-2 cbg2 rounded">
                 <form action="blog.php" method="post" enctype="multipart/form-data">
@@ -379,13 +422,13 @@ if (isset($_POST['action'])) {
                             </div>
                             <div class="justify-content-end d-flex">
                                 <div class="input-group flex-nowrap ctext me-2">
-                                    <span class="input-group-text" for="inputVisible">Visible</span>
+                                    <span class="input-group-text" for="inputVisible">Sichtbar</span>
                                     <div class="input-group-text">
                                         <input class="form-check-input mt-0 checkbox-kolping" type="checkbox" id="inputVisible" name="visible">
                                     </div>                            
                                 </div>
-                                <button type="submit" class="btn btn-success ctext mx-2" name="action" value="save"><span>Speichern</span></button>
-                                <button type="button" class="btn btn-danger ctext ms-2" onclick="window.location.href = '/internal/blog.php';">Abbrechen</button>
+                                <button id="save" type="submit" class="btn btn-success ctext mx-2" name="action" value="save" onclick="blocker = false;"><span>Speichern</span></button>
+                                <button id="cancel" type="button" class="btn btn-danger ctext ms-2" name="action" value="cancel" onclick="blocker = false; window.location.href = '/internal/blog.php';">Abbrechen</button>
                             </div>
                         </div>
                     <?php else: ?>
@@ -413,7 +456,7 @@ if (isset($_POST['action'])) {
                         <div class="col p-2 rounded">
                             <div>
                                 <div class="input-group flex-nowrap justify-content-center ctext">
-                                    <span class="input-group-text" for="inputVisible">Visible</span>
+                                    <span class="input-group-text" for="inputVisible">Sichtbar</span>
                                     <div class="input-group-text">
                                         <input class="form-check-input mt-0 checkbox-kolping" type="checkbox" id="inputVisible" name="visible" checked>
                                     </div>                            
@@ -421,8 +464,8 @@ if (isset($_POST['action'])) {
                             </div>
                         </div>
                         <div class="col p-2 rounded d-flex justify-content-between">
-                            <button type="submit" class="btn btn-success ctext" name="action" value="save"><span>Speichern</span></button>
-                            <button type="button" class="btn btn-danger ctext" onclick="window.location.href = '/internal/blog.php';">Abbrechen</button>
+                            <button type="submit" class="btn btn-success ctext" name="action" value="save" onclick="blocker = false;"><span>Speichern</span></button>
+                            <button type="button" class="btn btn-danger ctext" onclick="blocker = false; window.location.href = '/internal/blog.php';">Abbrechen</button>
                         </div>
                     <?php endif; ?>
                     <div class="col p-2 rounded">
@@ -490,6 +533,14 @@ if (isset($_POST['action'])) {
                 </div>
             </div>
         </div>
+        <script>
+            window.onbeforeunload = function() { 
+                if (blocker == true) {
+                    return "Achtung, deine Arbeit wird eventuell nicht gespeichert!"; 
+                    blocker = true;
+                }
+            }
+        </script>
         <?php 
         include_once("templates/footer.php");
         exit;
@@ -522,15 +573,15 @@ require_once("templates/header.php");
 ?>
 <div class="container py-3">
     <div style="min-height: 80vh;">
-        <h1 class="display-3 text-center mb-3 text-kolping-orange">Blogs Editieren</h1>
+        <h1 class="display-3 text-center mb-3 text-kolping-orange">Nachrichten Editieren</h1>
         <form action="blog.php" method="post" enctype="multipart/form-data" class="d-flex justify-content-end">
-            <button type="submit" name="action" class="btn btn-kolping" value="add">Blog Hinzufügen</button>
+            <button type="submit" name="action" class="btn btn-kolping" value="add">Nachricht Hinzufügen</button>
         </form>
         
-        <div class="row row-cols-<?php if (!isMobile()) print("4"); else print("1");?> gx-3">
+        <div class="row row-cols-<?php if (!isMobile()) print("3"); else print("1");?> gx-3">
             <?php foreach ($blogentrys as $blogentry): ?>
                 <div class="col p-2">
-                    <div class="card cbg2" style="height: 100% !important;">
+                    <div class="card cbg2 shadow1" style="height: 100% !important;">
                         <picture>
                             <source type="image/webp" srcset="<?=$blogentry['source']?>.webp" class="card-img-top img-fluid rounded">
                             <source type="image/jpeg" srcset="<?=$blogentry['source']?>" class="card-img-top img-fluid rounded">
@@ -544,6 +595,12 @@ require_once("templates/header.php");
                         <form action="blog.php" method="post" enctype="multipart/form-data" class="p-2 d-flex justify-content-between">
                             <input type="number" value="<?=$blogentry['blog_entrys_id']?>" name="blog_entrys_id" style="display: none;" required>
                             <button type="submit" name="action" class="btn btn-kolping" value="mod">Editieren</button>
+                            <div class="input-group flex-nowrap justify-content-center ctext">
+                                <span class="input-group-text" for="inputVisible">Sichtbar</span>
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0 checkbox-kolping" type="checkbox" id="inputVisible" name="visible" <?=($blogentry['visible']==1 ? 'checked':'')?> disabled>
+                                </div>   
+                            </div>   
                             <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#deleteCanvas-<?=$blogentry['blog_entrys_id']?>" aria-controls="deleteCanvas-<?=$blogentry['blog_entrys_id']?>">Löschen</button>
                             <div class="offcanvas offcanvas-end ctext cbg" data-bs-backdrop="static" tabindex="-1" id="deleteCanvas-<?=$blogentry['blog_entrys_id']?>" aria-labelledby="deleteCanvasLable-<?=$blogentry['blog_entrys_id']?>">
                                 <div class="offcanvas-header cbg">
