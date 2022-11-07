@@ -16,8 +16,8 @@
         </p>
         <h5 class="mb-1">Eintragung im Vereinsregister:</h5>
         <p class="mb-3">
-            Registergericht: Amtsgericht Schorndorf<br>
-            Registernummer:
+            Registergericht: Amtsgerichts Stuttgart<br>
+            Registernummer: VR 280560
         </p>
         <h5 class="mb-1">Umsatzsteuer-ID:</h5>
         <p class="mb-3">
