@@ -199,4 +199,8 @@ function delEvent($events_id) {
 	print("<script>location.href='termine.php'</script>");
 }
 
+
+$dateMMM = new IntlDateFormatter('de_DE', IntlDateFormatter::FULL, IntlDateFormatter::NONE, pattern:'MMM');
+$datedd = new IntlDateFormatter('de_DE', IntlDateFormatter::FULL, IntlDateFormatter::NONE, pattern:'dd');
+
 ?>

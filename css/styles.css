@@ -207,9 +207,16 @@ ul {
     box-shadow: 0 0 2px #ffffff;
 }
 
+.header-line {
+    width: 100%;
+    background-color: #FF8C00;
+    padding: 0;
+    margin: 0;
+}
+
 .header-header {
     /* height: 6vh; */
-    border-bottom: 10px solid #FF8C00;
+    border-bottom: 20px solid #FF8C00;
     display: block;
 }
 

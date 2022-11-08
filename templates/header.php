@@ -1,5 +1,6 @@
 <?php
 require_once("php/functions.php");
+setlocale (LC_ALL, 'de_DE.UTF-8', 'de_DE@euro', 'de_DE', 'de', 'ge', 'de_DE.ISO_8859-1', 'German_Germany');
 session_start();
 ?>
 
@@ -30,43 +31,48 @@ session_start();
 </head>
 <body>
 
-<nav class="navbar header-header navbar-expand-lg cbg ctext sticky-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-            <img src="/images/k.png" class="navbar-icon_light align-text-bottom" alt="Navbar Logo">
-            <img src="/images/k_dark.png" class="navbar-icon_dark align-text-bottom" alt="Navbar Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse cbg" tabindex="-1" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item text-size-x-large">
-                    <a class="nav-link clink" aria-current="page" href="/termine.php">Termine</a>
-                </li>
-                <li class="nav-item text-size-x-large">
-                    <a class="nav-link clink" href="/nachrichten.php">Nachrichten</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle cbg clink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Wir über uns
-                    </a>
-                    <ul class="dropdown-menu cbg ctext">
-                        <li><a class="dropdown-item clink cbg" href="/wir/grusswort.php">Grusswort Präses</a></li>
-                        <li><a class="dropdown-item clink cbg" href="/wir/vorstand.php">Unser Vorstand</a></li>
-                        <li><a class="dropdown-item clink cbg" href="/wir/kolping_in_12_saetzen.php">Kolping in 12 Sätzen</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item text-size-x-large <?php if (!isMobile()) print("pt-1 ps-2"); else print("pt-2");""?>">
-                    <a href="https://jugend.kolping-schorndorf.de">
-                        <img src="/images/kj.svg" class="navbar-kj_light align-text-bottom" alt="Kolpingjugend Logo">
-                        <img src="/images/kj_dark.svg" class="navbar-kj_dark align-text-bottom" alt="Kolpingjugend Logo">
-                    </a>
-                </li>
-            </ul>
+<header class="sticky-top">
+    <nav class="navbar navbar-expand-lg cbg ctext ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/images/k.png" class="navbar-icon_light align-text-bottom" alt="Navbar Logo">
+                <img src="/images/k_dark.png" class="navbar-icon_dark align-text-bottom" alt="Navbar Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse cbg" tabindex="-1" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item text-size-x-large">
+                        <a class="nav-link clink" aria-current="page" href="/termine.php">Termine</a>
+                    </li>
+                    <li class="nav-item text-size-x-large">
+                        <a class="nav-link clink" href="/nachrichten.php">Nachrichten</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle cbg clink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Wir über uns
+                        </a>
+                        <ul class="dropdown-menu cbg ctext">
+                            <li><a class="dropdown-item clink cbg" href="/wir/grusswort.php">Grusswort Präses</a></li>
+                            <li><a class="dropdown-item clink cbg" href="/wir/vorstand.php">Unser Vorstand</a></li>
+                            <li><a class="dropdown-item clink cbg" href="/wir/kolping_in_12_saetzen.php">Kolping in 12 Sätzen</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item text-size-x-large <?php if (!isMobile()) print("pt-1 ps-2"); else print("pt-2");""?>">
+                        <a href="https://jugend.kolping-schorndorf.de">
+                            <img src="/images/kj.svg" class="navbar-kj_light align-text-bottom" alt="Kolpingjugend Logo">
+                            <img src="/images/kj_dark.svg" class="navbar-kj_dark align-text-bottom" alt="Kolpingjugend Logo">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
+    <div class="header-line text-end">
+        <a href="mailto:info@kolping-schorndorf.de" class="ctext pe-1"><i class="bi bi-envelope-fill pe-1"></i>info@kolping-schorndorf.de</a>
     </div>
-</nav>
+</header>
 
 <div class="modal fade" id="cookieModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="cookieModalLabel" aria-hidden="true">
     <div class="modal-dialog cbg2">
