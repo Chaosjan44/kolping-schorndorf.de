@@ -46,10 +46,10 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <h2 class="text-start">Junge Familien</h2>
                         <div class="col-4">
                             <a>
-                                <picture data-bs-interval="5000">
+                                <picture>
                                     <source type="image/webp" srcset="/media/index/junge_familien.webp">
                                     <source type="image/jpeg" srcset="/media/index/junge_familien.jpg">
-                                    <img src="/media/index/junge_familien.jpg" class="d-block w-100 rounded-circle" alt="Vorschaubild">
+                                    <img src="/media/index/junge_familien.jpg" class="d-block w-100 rounded-circle shadow1" alt="Vorschaubild">
                                 </picture>
                             </a>
                         </div>
@@ -67,10 +67,10 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <h2 class="text-start">Seniorengruppe</h2>
                         <div class="col-4">
                             <a>
-                                <picture data-bs-interval="5000">
-                                    <source type="image/webp" srcset="/media/index/mutter_kind_kl.webp">
-                                    <source type="image/jpeg" srcset="/media/index/mutter_kind_kl.jpg">
-                                    <img src="/media/index/mutter_kind_kl.jpg" class="d-block w-100 rounded-circle" alt="Vorschaubild">
+                                <picture>
+                                    <source type="image/webp" srcset="/media/index/seniorengruppe.webp">
+                                    <source type="image/jpeg" srcset="/media/index/seniorengruppe.jpg">
+                                    <img src="/media/index/seniorengruppe.jpg" class="d-block w-100 rounded-circle shadow1" alt="Vorschaubild">
                                 </picture>
                             </a>
                         </div>
@@ -89,10 +89,10 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <h2 class="text-start">Frauengruppe</h2>
                         <div class="col-4">
                             <a>
-                                <picture data-bs-interval="5000">
+                                <picture>
                                     <source type="image/webp" srcset="/media/index/frauengruppe.webp">
                                     <source type="image/jpeg" srcset="/media/index/frauengruppe.jpg">
-                                    <img src="/media/index/frauengruppe.jpg" class="d-block w-100 rounded-circle" alt="Vorschaubild">
+                                    <img src="/media/index/frauengruppe.jpg" class="d-block w-100 rounded-circle shadow1" alt="Vorschaubild">
                                 </picture>
                             </a>
                         </div>
@@ -111,8 +111,8 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <h2 class="text-start">Kolpingjugend</h2>
                         <div class="col-4">
                             <a href="https://jugend.kolping-schorndorf.de" class="clink">
-                                <img src="/media/index/kj_light.png" class="kj_light w-100 rounded-circle" alt="Kolpingjugend Logo">
-                                <img src="/media/index/kj_dark.png" class="kj_dark w-100 rounded-circle" alt="Kolpingjugend Logo">
+                                <img src="/media/index/kj_light.png" class="kj_light w-100 rounded-circle shadow1" alt="Kolpingjugend Logo">
+                                <img src="/media/index/kj_dark.png" class="kj_dark w-100 rounded-circle shadow1" alt="Kolpingjugend Logo">
                             </a>
                         </div>
                         <div class="col-7">
@@ -225,10 +225,10 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <h2 class="text-start">Junge Familien</h2>
                         <div class="col-4">
                             <a>
-                                <picture data-bs-interval="5000">
+                                <picture>
                                     <source type="image/webp" srcset="/media/index/junge_familien.webp">
                                     <source type="image/jpeg" srcset="/media/index/junge_familien.jpg">
-                                    <img src="/media/index/junge_familien.jpg" class="d-block w-100 rounded-circle" alt="Vorschaubild">
+                                    <img src="/media/index/junge_familien.jpg" class="d-block w-100 rounded-circle shadow1" alt="Vorschaubild">
                                 </picture>
                             </a>
                         </div>
@@ -246,10 +246,10 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <h2 class="text-start">Seniorengruppe</h2>
                         <div class="col-4">
                             <a>
-                                <picture data-bs-interval="5000">
-                                    <source type="image/webp" srcset="/media/index/mutter_kind_kl.webp">
-                                    <source type="image/jpeg" srcset="/media/index/mutter_kind_kl.jpg">
-                                    <img src="/media/index/mutter_kind_kl.jpg" class="d-block w-100 rounded-circle" alt="Vorschaubild">
+                                <picture>
+                                    <source type="image/webp" srcset="/media/index/seniorengruppe.webp">
+                                    <source type="image/jpeg" srcset="/media/index/seniorengruppe.jpg">
+                                    <img src="/media/index/seniorengruppe.jpg" class="d-block w-100 rounded-circle shadow1" alt="Vorschaubild">
                                 </picture>
                             </a>
                         </div>
@@ -268,10 +268,10 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <h2 class="text-start">Frauengruppe</h2>
                         <div class="col-4">
                             <a>
-                                <picture data-bs-interval="5000">
+                                <picture>
                                     <source type="image/webp" srcset="/media/index/frauengruppe.webp">
                                     <source type="image/jpeg" srcset="/media/index/frauengruppe.jpg">
-                                    <img src="/media/index/frauengruppe.jpg" class="d-block w-100 rounded-circle" alt="Vorschaubild">
+                                    <img src="/media/index/frauengruppe.jpg" class="d-block w-100 rounded-circle shadow1" alt="Vorschaubild">
                                 </picture>
                             </a>
                         </div>
@@ -290,8 +290,8 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <h2 class="text-start">Kolpingjugend</h2>
                         <div class="col-4">
                             <a href="https://jugend.kolping-schorndorf.de" class="clink">
-                                <img src="/media/index/kj_light.png" class="kj_light w-100 rounded-circle" alt="Kolpingjugend Logo">
-                                <img src="/media/index/kj_dark.png" class="kj_dark w-100 rounded-circle" alt="Kolpingjugend Logo">
+                                <img src="/media/index/kj_light.png" class="kj_light w-100 rounded-circle shadow1" alt="Kolpingjugend Logo">
+                                <img src="/media/index/kj_dark.png" class="kj_dark w-100 rounded-circle shadow1" alt="Kolpingjugend Logo">
                             </a>
                         </div>
                         <div class="col-8">
