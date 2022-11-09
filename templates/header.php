@@ -62,7 +62,7 @@ session_start();
                         </ul>
                     </li>
                     <li class="nav-item text-size-x-large <?php if (!isMobile()) print("pt-1 ps-2"); else print("pt-2");""?>">
-                        <a href="https://jugend.kolping-schorndorf.de">
+                        <a href="https://jugend.kolping-schorndorf.de" target="_blank">
                             <img src="/images/kj.svg" class="navbar-kj_light align-text-bottom" alt="Kolpingjugend Logo">
                             <img src="/images/kj_dark.svg" class="navbar-kj_dark align-text-bottom" alt="Kolpingjugend Logo">
                         </a>

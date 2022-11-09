@@ -110,7 +110,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="row">
                         <h2 class="text-start">Kolpingjugend</h2>
                         <div class="col-4">
-                            <a href="https://jugend.kolping-schorndorf.de" class="clink">
+                            <a href="https://jugend.kolping-schorndorf.de" target="_blank" class="clink">
                                 <img src="/media/index/kj_light.png" class="kj_light w-100 rounded-circle shadow1" alt="Kolpingjugend Logo">
                                 <img src="/media/index/kj_dark.png" class="kj_dark w-100 rounded-circle shadow1" alt="Kolpingjugend Logo">
                             </a>
@@ -118,7 +118,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="col-7">
                             <span>
                                 Die Kolpingjugend trifft sich jeden zweiten Samstag um 16:30 im Kolpinghaus.<br>
-                                Weitere Informationen sind auf unserer <a href="https://jugend.kolping-schorndorf.de" class="link">Webseite</a> zu finden.<br>
+                                Weitere Informationen sind auf unserer <a href="https://jugend.kolping-schorndorf.de" target="_blank" class="link">Webseite</a> zu finden.<br>
                                 Kontakt: Gruppenleitende<br>
                                 E-Mail: <a href="mailto:jugend@kolping-schorndorf.de" class="link">jugend@kolping-schorndorf.de</a>
                             </span>
@@ -289,7 +289,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="row">
                         <h2 class="text-start">Kolpingjugend</h2>
                         <div class="col-4">
-                            <a href="https://jugend.kolping-schorndorf.de" class="clink">
+                            <a href="https://jugend.kolping-schorndorf.de" target="_blank" class="clink">
                                 <img src="/media/index/kj_light.png" class="kj_light w-100 rounded-circle shadow1" alt="Kolpingjugend Logo">
                                 <img src="/media/index/kj_dark.png" class="kj_dark w-100 rounded-circle shadow1" alt="Kolpingjugend Logo">
                             </a>
@@ -297,7 +297,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="col-8">
                             <span>
                                 Die Kolpingjugend trifft sich jeden zweiten Samstag um 16:30 im Kolpinghaus.<br>
-                                Weitere Informationen sind auf unserer <a href="https://jugend.kolping-schorndorf.de" class="link">Webseite</a> zu finden.<br>
+                                Weitere Informationen sind auf unserer <a href="https://jugend.kolping-schorndorf.de" target="_blank" class="link">Webseite</a> zu finden.<br>
                                 Kontakt: Gruppenleitende<br>
                                 E-Mail: <a href="mailto:jugend@kolping-schorndorf.de" class="link">jugend@kolping-schorndorf.de</a>
                             </span>
