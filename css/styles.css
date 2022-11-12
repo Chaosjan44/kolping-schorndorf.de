@@ -3,6 +3,11 @@
     box-shadow: 5px 5px 15px 3px rgba(0,0,0,0.71);
 }
 
+/* remove scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
