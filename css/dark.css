@@ -29,14 +29,14 @@ button {
     height: 70px;
 }
 
-.navbar-kj_light {
+.navbar-icon_light_k {
     display: none;
-    height: 60px;
+    height: 30px;
 }
 
-.navbar-kj_dark {
+.navbar-icon_dark_k {
     display: inline-block;
-    height: 60px;
+    height: 30px;
 }
 
 .kj_light {
