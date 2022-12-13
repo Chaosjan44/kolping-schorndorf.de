@@ -36,8 +36,8 @@ session_start();
     <nav class="navbar navbar-expand-lg cbg ctext ">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
-                <img src="/images/k.png" class="navbar-icon_light align-text-bottom" alt="Navbar Logo">
-                <img src="/images/k_dark.png" class="navbar-icon_dark align-text-bottom" alt="Navbar Logo">
+                <img src="/images/kolping-logo-rgb_light.svg" class="navbar-icon_light align-text-bottom" alt="Navbar Logo">
+                <img src="/images/kolping-logo-rgb_dark.svg" class="navbar-icon_dark align-text-bottom" alt="Navbar Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
