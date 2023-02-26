@@ -98,6 +98,22 @@ echo $buffer;
                         </div>
                     </div>
                     <div class="accordion-item cbg2 ctext">
+                        <h2 class="accordion-header cbg2 ctext" id="Jugend_Vertretung">
+                        <button class="accordion-button collapsed cbg2 ctext" type="button" data-bs-toggle="collapse" data-bs-target="#cJugend_Vertretung" aria-expanded="false" aria-controls="cJugend_Vertretung">
+                            Vertretung der Kolpingjugend im Vorstand
+                        </button>
+                        </h2>
+                        <div id="cJugend_Vertretung" class="accordion-collapse collapse" aria-labelledby="Jugend_Vertretung" data-bs-parent="#accordionExample">
+                            <div class="accordion-body cbg2 ctext">
+                                <strong>
+                                    Magnus Höfer<br>
+                                    Jan Schniebs<br>
+                                </strong>
+                                <a href="mailto:jugend@kolping-schorndorf.de" class="link">jugend@kolping-schorndorf.de</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item cbg2 ctext">
                         <h2 class="accordion-header cbg2 ctext" id="Hausverwalter">
                         <button class="accordion-button collapsed cbg2 ctext" type="button" data-bs-toggle="collapse" data-bs-target="#cHausverwalter" aria-expanded="false" aria-controls="cHausverwalter">
                             Hausverwalter
