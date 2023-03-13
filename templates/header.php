@@ -61,6 +61,9 @@ session_start();
                             <li><a class="dropdown-item clink cbg" href="/wir/kolping_in_12_saetzen.php">Kolping in 12 Sätzen</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item text-size-x-large">
+                        <a class="nav-link clink" aria-current="page" href="/programm.php">Programm</a>
+                    </li>
                     <li class="nav-item text-size-x-large <?php if (!isMobile()) print("pt-2 ps-2");?>">
                         <a href="https://jugend.kolping-schorndorf.de" target="_blank">
                             <img src="/images/KolpingK.png" class="navbar-icon_light_k align-text-bottom pe-2" alt="Navbar Logo">
