@@ -61,9 +61,9 @@ echo $buffer;
                         <div id="cKassiererin" class="accordion-collapse collapse" aria-labelledby="Kassiererin" data-bs-parent="#accordionExample">
                             <div class="accordion-body cbg2 ctext">
                                 <strong>
-                                    Petra Rath<br>
+                                    Marie Pick<br>
                                 </strong>
-                                <a href="mailto:petra.rath@kolping-schorndorf.de" class="link">petra.rath@kolping-schorndorf.de</a>
+                                <a href="mailto:marie.pick@kolping-schorndorf.de" class="link">marie.pick@kolping-schorndorf.de</a>
                             </div>
                         </div>
                     </div>
