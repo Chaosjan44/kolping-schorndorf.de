@@ -285,5 +285,5 @@ ul {
 }
 
 .form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(255, 140, 0, .25) !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 140, 0, .75) !important;
 }
