@@ -24,7 +24,7 @@ $crdate = "2023";
                         </li>
                         <li>
                             <i class="bi bi-chevron-right"></i>
-                            <a href="https://cloud.kolping-schorndorf.de" class="link ctext ps-2">Cloud</a>
+                            <a href="https://daten.kolping-schorndorf.de" class="link ctext ps-2">Cloud</a>
                         </li>
                     </ul>
                 </div>
@@ -78,7 +78,7 @@ $crdate = "2023";
                         </li>
                         <li>
                             <i class="bi bi-chevron-right"></i>
-                            <a href="https://cloud.kolping-schorndorf.de" class="link ctext ps-2">Cloud</a>
+                            <a href="https://daten.kolping-schorndorf.de" class="link ctext ps-2">Cloud</a>
                         </li>
                     </ul>
                 </div>
