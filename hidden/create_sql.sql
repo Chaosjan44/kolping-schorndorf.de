@@ -58,3 +58,17 @@ CREATE TABLE `events` (
     PRIMARY KEY (`events_id`),
     FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`)
 );
+
+CREATE TABLE `d_events` (
+    `d_events_id` INT(10) NOT NULL AUTO_INCREMENT,
+    `time` varchar(255) NOT NULL,
+    `weekday` INT(10) NOT NULL,
+    `title` varchar(255) NOT NULL,
+    `text` mediumtext NOT NULL,
+    `visible` tinyint(1) NOT NULL DEFAULT 0,
+    `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+    `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+    `created_by` INT(10) NOT NULL,
+    PRIMARY KEY (`d_events_id`),
+    FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`)
+);

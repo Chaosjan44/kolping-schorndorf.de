@@ -30,6 +30,7 @@ echo $buffer;
                         <?php endif; ?>
                         <?php if ($user['perm_event'] == "1"): ?>
                             <button class="btn btn-kolping mx-1 my-2" type="button" onclick="window.location.href = '/internal/termine.php';">Termine</button>
+                            <button class="btn btn-kolping mx-1 my-2" type="button" onclick="window.location.href = '/internal/d_termine.php';">Feste Termine</button>
                         <?php endif; ?>
                         <button class="btn btn-kolping mx-1 my-2" type="button" onclick="window.open('https://daten.kolping-schorndorf.de','_blank')">Cloud (Bilder usw.)</button>
                         <button class="btn btn-kolping mx-1 my-2" type="button" onclick="window.location.href = '/internal/settings.php';">Einstellungen</button>
@@ -44,8 +45,9 @@ echo $buffer;
                             <button class="btn btn-kolping mx-1" type="button" onclick="window.location.href = '/internal/blog.php';">Nachrichten</button>
                         <?php endif; ?>
                     </div>
-                    <?php if ($user['perm_event'] == "1"): ?>
+                    <?php if ($user['perm_event'] == "1"): ?>    
                         <button class="btn btn-kolping mx-1 my-2" type="button" onclick="window.location.href = '/internal/termine.php';">Termine</button>
+                        <button class="btn btn-kolping mx-1 my-2" type="button" onclick="window.location.href = '/internal/d_termine.php';">Feste Termine</button>
                     <?php endif; ?>
                         <button class="btn btn-kolping mx-1 my-2" type="button" onclick="window.open('https://daten.kolping-schorndorf.de','_blank')">Cloud (Bilder usw.)</button>
                     <div class="card-text">

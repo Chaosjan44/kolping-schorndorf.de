@@ -202,6 +202,42 @@ function delEvent($events_id) {
 	print("<script>location.href='termine.php'</script>");
 }
 
+function delD_Event($d_events_id) {
+	global $pdo;
+	$stmt = $pdo->prepare('DELETE FROM d_events where d_events_id = ?');
+	$stmt->bindValue(1, $d_events_id, PDO::PARAM_INT);
+	$result = $stmt->execute();
+	if (!$result) {
+		error('Datenbank Fehler!', pdo_debugStrParams($stmt));
+	}   
+	print("<script>location.href='d_termine.php'</script>");
+}
+
+function nbrToDay($day_number) {
+	switch ($day_number) {
+		case 1: 
+			return("Mo");
+			break;
+		case 2: 
+			return("Di");
+			break;
+		case 3: 
+			return("Mi");
+			break;
+		case 4: 
+			return("Do");
+			break;
+		case 5: 
+			return("Fr");
+			break;
+		case 6: 
+			return("Sa");
+			break;
+		case 7: 
+			return("So");
+			break;
+	}
+}
 
 $dateMMM = new IntlDateFormatter('de_DE', IntlDateFormatter::FULL, IntlDateFormatter::NONE, pattern:'MMM');
 $datedd = new IntlDateFormatter('de_DE', IntlDateFormatter::FULL, IntlDateFormatter::NONE, pattern:'dd');
