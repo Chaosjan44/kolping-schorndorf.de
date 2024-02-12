@@ -63,7 +63,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                         <div class="col-7">
                             <span>
-                                Die Jungen Familien treffen sich in regelmäßigen Abständen für gemeinsam Unternehmungen.<br>
+                                Die Jungen Familien treffen sich in regelmäßigen Abständen für gemeinsame Unternehmungen.<br>
                                 Kontakt: Judith Höfer<br>
                                 Telefon: 07181 - 254908
                             </span>
@@ -106,8 +106,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                         <div class="col-7">
                             <span>
-                                Treff jeweils donnerstags ab 14:30 im Kolpinghaus.<br>
-                                Darüber hinaus sind verschiedene Aktivitäten geplant, bitte Aushang im Kolpinghaus beachten.<br>
+                                Die Frauengruppe trifft sich in regelmäßigen Abständen für gemeinsame Unternehmungen.<br>
                                 Kontakt: Maria Schieszl<br>
                                 Telefon: 07181 - 61213
                             </span>
@@ -242,7 +241,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                         <div class="col-8">
                             <span>
-                                Die Jungen Familien treffen sich in regelmäßigen Abständen für gemeinsam Unternehmungen.<br>
+                                Die Jungen Familien treffen sich in regelmäßigen Abständen für gemeinsame Unternehmungen.<br>
                                 Kontakt: Judith Höfer<br>
                                 Telefon: 07181 - 254908
                             </span>
@@ -285,8 +284,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                         <div class="col-8">
                             <span>
-                                Treff jeweils donnerstags ab 14:30 im Kolpinghaus.<br>
-                                Darüber hinaus sind verschiedene Aktivitäten geplant, bitte Aushang im Kolpinghaus beachten.<br>
+                                Die Frauengruppe trifft sich in regelmäßigen Abständen für gemeinsame Unternehmungen.<br>
                                 Kontakt: Maria Schieszl<br>
                                 Telefon: 07181 - 61213
                             </span>
