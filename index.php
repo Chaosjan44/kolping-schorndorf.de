@@ -104,11 +104,11 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 </picture>
                             </a>
                         </div>
-                        <div class="col-7">
+                        <div class="col-7 placeholder-glow">
                             <span>
                                 Die Frauengruppe trifft sich in regelmäßigen Abständen für gemeinsame Unternehmungen.<br>
-                                Kontakt: Maria Schieszl<br>
-                                Telefon: 07181 - 61213
+                                Kontakt: <span class="col-6 placeholder"></span><br>
+                                Telefon: <span class="col-6 placeholder"></span>
                             </span>
                         </div>
                     </div>
@@ -282,11 +282,11 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 </picture>
                             </a>
                         </div>
-                        <div class="col-8">
+                        <div class="col-8 placeholder-glow">
                             <span>
                                 Die Frauengruppe trifft sich in regelmäßigen Abständen für gemeinsame Unternehmungen.<br>
-                                Kontakt: Maria Schieszl<br>
-                                Telefon: 07181 - 61213
+                                Kontakt: <span class="col-6 placeholder"></span><br>
+                                Telefon: <span class="col-6 placeholder"></span>
                             </span>
                         </div>
                     </div>
