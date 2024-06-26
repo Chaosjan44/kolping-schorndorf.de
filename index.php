@@ -20,15 +20,25 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="mb-3" style="min-height: <?php if (!isMobile()) print("33"); else print("38"); ?>vh;">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
+<<<<<<< Updated upstream
                 <div class="carousel-item active" data-bs-interval="8000">
                     <picture>
+=======
+                <div class="carousel-item active">
+                    <picture data-bs-interval="10000">
+>>>>>>> Stashed changes
                         <source type="image/webp" srcset="/media/index/indexpic1<?php if (isMobile()) {print("_mobile");}?>.webp" class="d-block w-100">
                         <source type="image/jpeg" srcset="/media/index/indexpic1<?php if (isMobile()) {print("_mobile");}?>.jpg" class="d-block w-100">
                         <img src="/media/index/indexpic1<?php if (isMobile()) {print("_mobile");}?>.jpg" class="d-block w-100" alt="Vorschaubild">
                     </picture>
                 </div>
+<<<<<<< Updated upstream
                 <div class="carousel-item" data-bs-interval="8000">
                     <picture>
+=======
+                <div class="carousel-item">
+                    <picture data-bs-interval="10000">
+>>>>>>> Stashed changes
                         <source type="image/webp" srcset="/media/index/indexpic2<?php if (isMobile()) {print("_mobile");}?>.webp" class="d-block w-100">
                         <source type="image/jpeg" srcset="/media/index/indexpic2<?php if (isMobile()) {print("_mobile");}?>.jpg" class="d-block w-100">
                         <img src="/media/index/indexpic2<?php if (isMobile()) {print("_mobile");}?>.jpg" class="d-block w-100" alt="Vorschaubild">
