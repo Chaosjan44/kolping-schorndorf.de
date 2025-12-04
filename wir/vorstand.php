@@ -107,7 +107,7 @@ echo $buffer;
                             <div class="accordion-body cbg2 ctext">
                                 <strong>
                                     Magnus Höfer<br>
-                                    Jan Schniebs<br>
+                                    Benedikt Höfer<br>
                                 </strong>
                                 <a href="mailto:jugend@kolping-schorndorf.de" class="link">jugend@kolping-schorndorf.de</a>
                             </div>
